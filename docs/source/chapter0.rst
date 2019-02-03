@@ -6,16 +6,16 @@ chapter 0: Python Algorithms 1-100
    :maxdepth: 4
 
 
-    .001.two-sum/question
-    .002.add-two-numbers/question
-    .003.longest-substring-without-repeating-characters/question
-    .004.median-of-two-sorted-arrays/question
-    .005.longest-palindromic-substring/question
-    .006.zigzag-conversion/question
-    .007.reverse-integer/question
-    .008.string-to-integer-atoi/question
-    .009.palindrome-number/question
-    .010.regular-expression-matching/question
+    001.two-sum/question
+    002.add-two-numbers/question
+    003.longest-substring-without-repeating-characters/question
+    004.median-of-two-sorted-arrays/question
+    005.longest-palindromic-substring/question
+    006.zigzag-conversion/question
+    007.reverse-integer/question
+    008.string-to-integer-atoi/question
+    009.palindrome-number/question
+    010.regular-expression-matching/question
     .011.container-with-most-water/question
     .012.integer-to-roman/question
     .013.roman-to-integer/question
