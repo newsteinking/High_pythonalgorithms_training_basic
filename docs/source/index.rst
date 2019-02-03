@@ -16,6 +16,7 @@ Python Algorithms Training Basic
 .. toctree::
    :maxdepth: 4
 
+
    chapter0
    chapter1
    chapter2
