@@ -1,9 +1,9 @@
 chapter 2: Python Algorithms 201-300
 =======================================
 
+`Github <https://github.com/newsteinking/leetcode>`_ | https://github.com/newsteinking/leetcode
 
-.. toctree::
-   :maxdepth: 4
+.. code-block:: python
 
 
    .201.bitwise-and-of-numbers-range/question

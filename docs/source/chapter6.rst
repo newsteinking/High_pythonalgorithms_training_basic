@@ -2,8 +2,9 @@ chapter 6: Python Algorithms 601-700
 ==========================================
 
 
-.. toctree::
-   :maxdepth: 4
+`Github <https://github.com/newsteinking/leetcode>`_ | https://github.com/newsteinking/leetcode
+
+.. code-block:: python
 
 
     .604.design-compressed-string-iterator/question

@@ -1,8 +1,10 @@
 chapter 1: Python Algorithms 101-200
 =======================================
 
-.. toctree::
-   :maxdepth: 4
+
+`Github <https://github.com/newsteinking/leetcode>`_ | https://github.com/newsteinking/leetcode
+
+.. code-block:: python
 
    .101.symmetric-tree/question
    .102.binary-tree-level-order-traversal/question

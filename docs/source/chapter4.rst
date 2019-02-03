@@ -2,8 +2,9 @@ chapter 4: Python Algorithms 401-500
 ==================================================
 
 
-.. toctree::
-   :maxdepth: 4
+`Github <https://github.com/newsteinking/leetcode>`_ | https://github.com/newsteinking/leetcode
+
+.. code-block:: python
 
 
    .401.binary-watch/question

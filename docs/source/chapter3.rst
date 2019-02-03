@@ -1,9 +1,10 @@
 chapter 3: Python Algorithms 301-400
 =======================================
 
-.. toctree::
-   :maxdepth: 4
+`Github <https://github.com/newsteinking/leetcode>`_ | https://github.com/newsteinking/leetcode
 
+
+.. code-block:: python
 
    .301.remove-invalid-parentheses/question
    .302.smallest-rectangle-enclosing-black-pixels/question

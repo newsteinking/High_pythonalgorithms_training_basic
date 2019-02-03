@@ -1,9 +1,10 @@
 chapter 5: Python Algorithms 501-600
 ============================================================
 
+`Github <https://github.com/newsteinking/leetcode>`_ | https://github.com/newsteinking/leetcode
 
-.. toctree::
-   :maxdepth: 4
+
+.. code-block:: python
 
 
 
