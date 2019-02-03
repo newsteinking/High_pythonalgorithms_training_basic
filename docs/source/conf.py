@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Python Algorithms Advanced'
+project = 'Python Algorithms Traing Basic'
 copyright = '2019, sean'
 author = 'sean'
 
@@ -114,7 +114,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'pythonalgorithmsadvanceddoc'
+htmlhelp_basename = 'pythonalgorithmstrainingbasicdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -146,7 +146,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'pythonalgorithmsadvanced.tex', 'Python Algorithms Advanced Documentation',
+    (master_doc, 'pythonalgorithmstrainingbasic.tex', 'Python Algorithms Training Basic Documentation',
     'sean', 'manual'),
 ]
 
@@ -167,8 +167,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'pythonalgorithmsadvanced', 'pythonalgorithmsadvanced Documentation',
-     author, 'pythonalgorithmsadvanced', 'One line description of project.',
+    (master_doc, 'pythonalgorithmstrainingbasic', 'pythonalgorithmstrainingbasic Documentation',
+     author, 'pythonalgorithmstrainingbasic', 'One line description of project.',
      'Miscellaneous'),
 ]
 
