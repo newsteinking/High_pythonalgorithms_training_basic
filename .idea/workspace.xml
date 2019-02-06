@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5169b0e0-6b60-4a75-83da-e33abb7bd11b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/source/chapter4-1-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter11-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter11-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter12-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter12-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter14-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter14-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter15-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter15-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter18-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter18-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter19-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter19-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter2-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter2-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter20-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter20-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter21-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter21-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter22-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter22-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter23-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter23-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter24-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter24-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter25-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter25-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter3-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter3-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter4.rst" afterPath="$PROJECT_DIR$/docs/source/chapter4.rst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter5-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter5-1.rst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter6-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter6-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter7-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter7-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter8-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter8-1.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/source/chapter9-1.rst" afterPath="$PROJECT_DIR$/docs/source/chapter9-1.rst" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,61 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="chapter2-1.rst" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/source/chapter2-1.rst">
+      <file leaf-file-name="chapter6-1.rst" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/source/chapter6-1.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1705">
-              <caret line="1240" column="32" lean-forward="true" selection-start-line="1240" selection-start-column="32" selection-end-line="1240" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chapter3-1.rst" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/source/chapter3-1.rst">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="1385" column="69" lean-forward="true" selection-start-line="1385" selection-start-column="4" selection-end-line="1385" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chapter3-2.rst" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/source/chapter3-2.rst">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chapter3-3.rst" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/source/chapter3-3.rst">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chapter4-1.rst" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/source/chapter4-1.rst">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chapter4-1-1.rst" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/source/chapter4-1-1.rst">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="586" column="0" lean-forward="true" selection-start-line="586" selection-start-column="0" selection-end-line="586" selection-end-column="0" />
+            <state relative-caret-position="850">
+              <caret line="1223" column="0" lean-forward="true" selection-start-line="1055" selection-start-column="4" selection-end-line="1223" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -108,8 +38,6 @@
         <option value="$PROJECT_DIR$/docs/source/chapter1-1.rst" />
         <option value="$PROJECT_DIR$/docs/source/chapter1.rst" />
         <option value="$PROJECT_DIR$/docs/source/chapter1-1-1.rst" />
-        <option value="$PROJECT_DIR$/docs/source/chapter5-1.rst" />
-        <option value="$PROJECT_DIR$/docs/source/chapter6-1.rst" />
         <option value="$PROJECT_DIR$/docs/source/chapter7-1.rst" />
         <option value="$PROJECT_DIR$/docs/source/chapter8-1.rst" />
         <option value="$PROJECT_DIR$/docs/source/chapter9-1.rst" />
@@ -129,6 +57,8 @@
         <option value="$PROJECT_DIR$/docs/source/chapter3-1.rst" />
         <option value="$PROJECT_DIR$/docs/source/chapter4.rst" />
         <option value="$PROJECT_DIR$/docs/source/chapter4-1-1.rst" />
+        <option value="$PROJECT_DIR$/docs/source/chapter5-1.rst" />
+        <option value="$PROJECT_DIR$/docs/source/chapter6-1.rst" />
       </list>
     </option>
   </component>
@@ -569,22 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/chapter5-1.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/chapter6-1.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/chapter7-1.rst">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -737,14 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/chapter2-1.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1705">
-          <caret line="1240" column="32" lean-forward="true" selection-start-line="1240" selection-start-column="32" selection-end-line="1240" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/chapter3-2.rst">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -787,8 +693,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/chapter4-1-1.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
+        <state relative-caret-position="774">
           <caret line="586" column="0" lean-forward="true" selection-start-line="586" selection-start-column="0" selection-end-line="586" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/chapter5.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/chapter2-1.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2731">
+          <caret line="1240" column="32" lean-forward="true" selection-start-line="1240" selection-start-column="32" selection-end-line="1240" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/chapter5-1.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="1186" column="0" lean-forward="true" selection-start-line="1091" selection-start-column="4" selection-end-line="1186" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/chapter6-1.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="1223" column="0" lean-forward="true" selection-start-line="1055" selection-start-column="4" selection-end-line="1223" selection-end-column="0" />
           <folding />
         </state>
       </provider>
