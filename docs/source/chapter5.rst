@@ -1,4 +1,4 @@
-chapter 5: Python Algorithms 501-600
+chapter 5: Linked List
 ============================================================
 
 `Github <https://github.com/newsteinking/leetcode>`_ | https://github.com/newsteinking/leetcode

@@ -1,4 +1,4 @@
-chapter 0: Python Algorithms 1-100
+chapter 7: Method
 =======================================
 
 

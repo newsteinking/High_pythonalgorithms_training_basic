@@ -1,4 +1,4 @@
-chapter 4: Python Algorithms 401-500
+chapter 4: Hash table
 ==================================================
 
 

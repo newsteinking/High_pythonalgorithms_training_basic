@@ -1,4 +1,4 @@
-chapter 2: Python Algorithms 201-300
+chapter 2: Bit manipulation
 =======================================
 
 `Github <https://github.com/newsteinking/leetcode>`_ | https://github.com/newsteinking/leetcode

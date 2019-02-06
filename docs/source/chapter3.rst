@@ -1,4 +1,4 @@
-chapter 3: Python Algorithms 301-400
+chapter 3: Dynamic Programming
 =======================================
 
 `Github <https://github.com/newsteinking/leetcode>`_ | https://github.com/newsteinking/leetcode

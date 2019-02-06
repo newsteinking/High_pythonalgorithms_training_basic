@@ -1,4 +1,4 @@
-chapter 6: Python Algorithms 601-700
+chapter 6: Math
 ==========================================
 
 
