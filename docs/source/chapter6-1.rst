@@ -209,6 +209,7 @@ Combination - Easy
 
 
     ...and its solution numbers marked in red.
+
     =================================================================
     class Solution(object):
       def solveSudoku(self, board):
@@ -355,6 +356,7 @@ Combination - Easy
 
     UPDATE (2017/1/4):
     The wordDict parameter had been changed to a list of strings (instead of a set of strings). Please reload the code definition to get the latest changes.
+
     =================================================================
     class Solution(object):
       def wordBreak(self, s, wordDict):
@@ -690,6 +692,7 @@ Combination - Easy
     Follow up: Could you improve it to O(n log n) time complexity?
 
     Credits:Special thanks to @pbrother for adding this problem and creating all test cases.
+
     =================================================================
     class Solution(object):
       def lengthOfLIS(self, nums):
@@ -783,6 +786,7 @@ Combination - Easy
 
 
     Credits:Special thanks to @dietpepsi for adding this problem and creating all test cases.
+
     =================================================================
     import random
 
@@ -972,6 +976,7 @@ Combination - Easy
     The longest increasing path is [3, 4, 5, 6]. Moving diagonally is not allowed.
 
     Credits:Special thanks to @dietpepsi for adding this problem and creating all test cases.
+
     =================================================================
     directions = [(0, -1), (0, 1), (-1, 0), (1, 0)]
 

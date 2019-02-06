@@ -515,6 +515,7 @@ Depth First Search - Easy
     Answer: 3
 
     Credits:Special thanks to @mithmatt for adding this problem and creating all test cases.
+
     =================================================================
     class Solution(object):
       def numIslands(self, grid):
@@ -611,6 +612,7 @@ Depth First Search - Easy
 
 
     Credits:Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.
+
     =================================================================
     class Solution:
       # @param {TreeNode} root
@@ -674,6 +676,7 @@ Depth First Search - Easy
 
 
     Credits:Special thanks to @davidtan1890 for adding this problem and creating all test cases.
+
     =================================================================
     class Solution(object):
       def addOperators(self, num, target):
@@ -768,6 +771,7 @@ Depth First Search - Easy
 
 
     Credits:Special thanks to @hpplayer for adding this problem and creating all test cases.
+
     =================================================================
     class Solution(object):
       def removeInvalidParentheses(self, s):
@@ -1010,6 +1014,7 @@ Depth First Search - Easy
 
 
     Credits:Special thanks to @jeantimex for adding this problem and creating all test cases.
+    
     =================================================================
     class Solution(object):
       def isAdditiveNumber(self, num):

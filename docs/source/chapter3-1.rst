@@ -29,6 +29,7 @@ BinarySearch - Easy
     nums2 = [3, 4]
 
     The median is (2 + 3)/2 = 2.5
+
     =================================================================
     class Solution(object):
       def findMedianSortedArrays(self, nums1, nums2):
@@ -181,6 +182,7 @@ BinarySearch - Easy
     You are given a target value to search. If found in the array return its index, otherwise return -1.
 
     You may assume no duplicate exists in the array.
+
     =================================================================
     class Solution(object):
       def search(self, nums, target):
@@ -446,6 +448,7 @@ BinarySearch - Easy
     Implement int sqrt(int x).
 
     Compute and return the square root of x.
+
     =================================================================
     class Solution(object):
       def mySqrt(self, x):
@@ -543,6 +546,7 @@ BinarySearch - Easy
 
 
     Given target = 3, return true.
+
     =================================================================
     class Solution(object):
       def searchMatrix(self, matrix, target):
@@ -626,6 +630,8 @@ BinarySearch - Easy
     Write a function to determine if a given target is in the array.
 
     The array may contain duplicates.
+
+
     =================================================================
     class Solution(object):
       def search(self, nums, target):
@@ -728,6 +734,7 @@ BinarySearch - Easy
     Find the minimum element.
 
     You may assume no duplicate exists in the array.
+
     =================================================================
     class Solution(object):
       def findMin(self, nums):
@@ -793,6 +800,7 @@ BinarySearch - Easy
     Find the minimum element.
 
     The array may contain duplicates.
+
     =================================================================
     class Solution(object):
       def findMin(self, nums):
@@ -870,6 +878,7 @@ BinarySearch - Easy
 
 
     Credits:Special thanks to @ts for adding this problem and creating all test cases.
+
     =================================================================
     class Solution(object):
       def findPeakElement(self, nums):
@@ -932,6 +941,7 @@ if __name__ == '__main__':
 
     Definition of a complete binary tree from Wikipedia:
     In a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2h nodes inclusive at the last level h.
+
     =================================================================
     class Solution(object):
       def getHeight(self, root):
@@ -1009,6 +1019,7 @@ if __name__ == '__main__':
     What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently? How would you optimize the kthSmallest routine?
 
     Credits:Special thanks to @ts for adding this problem and creating all test cases.
+
     =================================================================
     class Solution(object):
       def kthSmallest(self, root, k):
@@ -1142,6 +1153,7 @@ if __name__ == '__main__':
 .. code-block:: python
 
     Follow up for H-Index: What if the citations array is sorted in ascending order? Could you optimize your algorithm?
+
     =================================================================
     class Solution(object):
       def hIndex(self, citations):
@@ -1210,6 +1222,7 @@ if __name__ == '__main__':
 
 
     Credits:Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.
+
     =================================================================
 
     class Solution(object):
@@ -1273,6 +1286,7 @@ if __name__ == '__main__':
 
 
     Credits:Special thanks to @elmirap for adding this problem and creating all test cases.
+
     =================================================================
     class Solution(object):
       def isPerfectSquare(self, num):
@@ -1383,6 +1397,7 @@ if __name__ == '__main__':
 
     Note:
     You may assume k is always valid, 1 &le; k &le; n2.
+
     =================================================================
     import heapq
 

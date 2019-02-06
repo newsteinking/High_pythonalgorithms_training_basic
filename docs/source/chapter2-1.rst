@@ -53,6 +53,7 @@ Backtracking - Easy
         res = []
         dfs(0, [], res, n)
         return res
+
     =================================================================
     def generateParenthesis(self, n):
         """
@@ -131,6 +132,7 @@ Backtracking - Easy
       [7],
       [2, 2, 3]
     ]
+
     =================================================================
     class Solution(object):
       def combinationSum(self, candidates, target):
@@ -153,6 +155,8 @@ Backtracking - Easy
         res = []
         dfs(candidates, 0, target, [], res)
         return res
+
+
     ===================================================================
     class Solution(object):
         """ Classic backtracking problem.
@@ -221,6 +225,7 @@ Backtracking - Easy
       [2, 6],
       [1, 1, 6]
     ]
+
     ===================================================================
     class Solution(object):
       def combinationSum2(self, candidates, target):
@@ -1092,6 +1097,7 @@ Backtracking - Easy
       ["aa","b"],
       ["a","a","b"]
     ]
+
     =================================================================
     class Solution(object):
       def partition(self, s):
@@ -1110,6 +1116,7 @@ Backtracking - Easy
                 a = res + [s[j:i + 1]]
                 ans[i + 1].append(a)
         return ans[-1]
+
     =================================================================
     class Solution(object):
         def partition(self, s):
@@ -1185,6 +1192,7 @@ Backtracking - Easy
 
 
     Credits:Special thanks to @mithmatt for adding this problem and creating all test cases.
+
     =================================================================
     class Solution(object):
       def combinationSum3(self, k, n):

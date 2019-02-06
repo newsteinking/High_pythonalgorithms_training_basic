@@ -9,78 +9,80 @@ Breadth First Search - Easy
 
 .. code-block:: python
 
-Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
+    Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
 
 
-For example:
-Given binary tree [3,9,20,null,null,15,7],
+    For example:
+    Given binary tree [3,9,20,null,null,15,7],
 
-    3
-   / \
-  9  20
-    /  \
-   15   7
-
-
-
-return its level order traversal as:
-
-[
-  [3],
-  [9,20],
-  [15,7]
-]
-=================================================================
-from collections import deque
+        3
+       / \
+      9  20
+        /  \
+       15   7
 
 
-class Solution(object):
-  def levelOrder(self, root):
-    """
-    :type root: TreeNode
-    :rtype: List[List[int]]
-    """
-    if not root:
-      return []
-    ans = [[root.val]]
-    queue = deque([root])
-    while queue:
-      levelans = []
-      for _ in range(0, len(queue)):
-        root = queue.popleft()
-        if root.left:
-          levelans.append(root.left.val)
-          queue.append(root.left)
-        if root.right:
-          levelans.append(root.right.val)
-          queue.append(root.right)
-      if levelans:
-        ans.append(levelans)
-    return ans
+
+    return its level order traversal as:
+
+    [
+      [3],
+      [9,20],
+      [15,7]
+    ]
 
 
-=================================================================
-class Solution(object):
-    def levelOrder(self, root):
+    =================================================================
+    from collections import deque
+
+
+    class Solution(object):
+      def levelOrder(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[List[int]]
+        """
         if not root:
-            return []
-
-        cur_level, ans = [root], []
-
-        # Breadth-first Search, Pythonic way.
-        while cur_level:
-            ans.append([node.val for node in cur_level])
-            cur_level = [kid for n in cur_level
-                         for kid in (n.left, n.right) if kid]
-
+          return []
+        ans = [[root.val]]
+        queue = deque([root])
+        while queue:
+          levelans = []
+          for _ in range(0, len(queue)):
+            root = queue.popleft()
+            if root.left:
+              levelans.append(root.left.val)
+              queue.append(root.left)
+            if root.right:
+              levelans.append(root.right.val)
+              queue.append(root.right)
+          if levelans:
+            ans.append(levelans)
         return ans
 
-"""
-[]
-[1]
-[1,2,3]
-[3,9,20,null,null,15,7]
-"""
+
+    =================================================================
+    class Solution(object):
+        def levelOrder(self, root):
+            if not root:
+                return []
+
+            cur_level, ans = [root], []
+
+            # Breadth-first Search, Pythonic way.
+            while cur_level:
+                ans.append([node.val for node in cur_level])
+                cur_level = [kid for n in cur_level
+                             for kid in (n.left, n.right) if kid]
+
+            return ans
+
+    """
+    []
+    [1]
+    [1,2,3]
+    [3,9,20,null,null,15,7]
+    """
 
 103. Binary tree zigzag level order traversal
 --------------------------------------------------
@@ -174,6 +176,7 @@ class Solution(object):
     Given a binary tree, find its maximum depth.
 
     The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+
     =================================================================
     class Solution(object):
       def maxDepth(self, root):
@@ -184,6 +187,7 @@ class Solution(object):
         if not root:
           return 0
         return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1
+
     =================================================================
     class Solution(object):
         def maxDepth(self, root):
@@ -973,6 +977,7 @@ class Solution(object):
 
 
     Credits:Special thanks to @dietpepsi for adding this problem and creating all test cases.
+
     =================================================================
     from collections import deque
 
@@ -1110,6 +1115,7 @@ class Solution(object):
 
 
     Credits:Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.
+
     =================================================================
     class Solution(object):
       def coinChange(self, coins, amount):

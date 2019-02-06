@@ -14,6 +14,7 @@ Bit manipulation - Easy 2
 
 
     If it is overflow, return MAX_INT.
+
     =================================================================
     class Solution(object):
       def divide(self, dividend, divisor):
@@ -127,6 +128,7 @@ Bit manipulation - Easy 2
         ans = []
         dfs(nums, 0, [], ans)
         return ans
+
     =================================================================
     class Solution(object):
         def subsets(self, nums):
@@ -173,6 +175,7 @@ Bit manipulation - Easy 2
 
     Note:
     Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+
     =================================================================
     class Solution(object):
       def singleNumber(self, nums):
@@ -234,6 +237,7 @@ Bit manipulation - Easy 2
           return ret
 
         return singleNumberK(nums, 3)
+
     =================================================================
     class Solution(object):
         """
@@ -300,6 +304,7 @@ Bit manipulation - Easy 2
 
 
     Credits:Special thanks to @amrsaqr for adding this problem and creating all test cases.
+
     =================================================================
     class Solution(object):
       def rangeBitwiseAnd(self, m, n):
@@ -311,6 +316,7 @@ Bit manipulation - Easy 2
         while m < n:
           n = n & n - 1
         return n
+
     =================================================================
     class Solution(object):
         """ Refer to
@@ -384,6 +390,7 @@ Bit manipulation - Easy 2
 
 
     Credits:Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.
+
     =================================================================
     class Solution(object):
       def singleNumber(self, nums):
@@ -444,37 +451,38 @@ Bit manipulation - Easy 2
 .. code-block:: python
 
 
-        Given a string array words, find the maximum value of length(word[i]) * length(word[j]) where the two words do not share common letters.
-        You may assume that each word will contain only lower case letters.
-        If no such two words exist, return 0.
+    Given a string array words, find the maximum value of length(word[i]) * length(word[j]) where the two words do not share common letters.
+    You may assume that each word will contain only lower case letters.
+    If no such two words exist, return 0.
 
 
 
-        Example 1:
+    Example 1:
 
 
-        Given ["abcw", "baz", "foo", "bar", "xtfn", "abcdef"]
-        Return 16
-        The two words can be "abcw", "xtfn".
+    Given ["abcw", "baz", "foo", "bar", "xtfn", "abcdef"]
+    Return 16
+    The two words can be "abcw", "xtfn".
 
 
-        Example 2:
+    Example 2:
 
 
-        Given ["a", "ab", "abc", "d", "cd", "bcd", "abcd"]
-        Return 4
-        The two words can be "ab", "cd".
+    Given ["a", "ab", "abc", "d", "cd", "bcd", "abcd"]
+    Return 4
+    The two words can be "ab", "cd".
 
 
-        Example 3:
+    Example 3:
 
 
-        Given ["a", "aa", "aaa", "aaaa"]
-        Return 0
-        No such pair of words.
+    Given ["a", "aa", "aaa", "aaaa"]
+    Return 0
+    No such pair of words.
 
 
     Credits:Special thanks to @dietpepsi for adding this problem and creating all test cases.
+
     =================================================================
     class Solution(object):
       def maxProduct(self, words):
@@ -548,6 +556,7 @@ Bit manipulation - Easy 2
 
 
     Credits:Special thanks to @ syedee  for adding this problem and creating all test cases.
+
     =================================================================
     class Solution(object):
       def countBits(self, num):
