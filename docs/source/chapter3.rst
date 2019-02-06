@@ -1,5 +1,7 @@
-chapter 3: Dynamic Programming
+chapter 3: Binary Search
 =======================================
+
+
 .. toctree::
    :maxdepth: 4
 

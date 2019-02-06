@@ -1,5 +1,6 @@
-chapter 2: Bit manipulation
+chapter 2: Backtracking
 =======================================
+
 
 .. toctree::
    :maxdepth: 4

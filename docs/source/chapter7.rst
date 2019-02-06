@@ -1,6 +1,5 @@
-chapter 7: Method
+chapter 7: Depth First Search
 =======================================
-
 
 
 .. toctree::

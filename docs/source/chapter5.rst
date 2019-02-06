@@ -1,5 +1,6 @@
-chapter 5: Linked List
-============================================================
+chapter 5: Breadth First Search
+=======================================
+
 
 .. toctree::
    :maxdepth: 4

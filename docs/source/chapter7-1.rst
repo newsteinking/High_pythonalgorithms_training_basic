@@ -1,14 +1,11 @@
-Method - Easy
+Depth First Search - Easy
 =======================================
 
 
 `Github <https://github.com/newsteinking/leetcode>`_ | https://github.com/newsteinking/leetcode
 
-New
+1.Two Sum
 --------------------
 
 .. code-block:: python
 
-    will continued.....
-
- 

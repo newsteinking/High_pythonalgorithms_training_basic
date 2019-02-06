@@ -1,5 +1,5 @@
-chapter 4: Hash table
-==================================================
+chapter 4: Bit manipulation
+=======================================
 
 .. toctree::
    :maxdepth: 4

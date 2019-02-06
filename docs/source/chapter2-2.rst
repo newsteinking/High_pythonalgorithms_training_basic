@@ -1,4 +1,4 @@
-Bit manipulation - Medium
+Backtracking - Medium
 =======================================
 
 
