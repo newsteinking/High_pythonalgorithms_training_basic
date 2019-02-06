@@ -1,4 +1,4 @@
-Array - Hard
+Bit manipulation - Hard
 =======================================
 
 

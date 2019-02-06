@@ -7,7 +7,9 @@ Python Algorithms Training Basic
 
 .. image:: ./img/chapter0_4.png
 
+
 .. image:: ./img/chapter0_5.png
+
 
 `Github <https://github.com/newsteinking/High_pythonalgorithms_training_basic>`_ | https://github.com/newsteinking/High_pythonalgorithms_training_basic
 
