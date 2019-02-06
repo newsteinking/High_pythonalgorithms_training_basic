@@ -1,7 +1,6 @@
 chapter 1: Array
 =======================================
 
-
 .. toctree::
    :maxdepth: 4
 
