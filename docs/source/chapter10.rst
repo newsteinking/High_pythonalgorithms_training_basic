@@ -6,5 +6,6 @@ chapter 10: Dynamic Programming
 
 
    chapter10-1
+   chapter10-1-1
    chapter10-2
    chapter10-3
