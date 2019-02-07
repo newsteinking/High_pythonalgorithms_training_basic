@@ -710,17 +710,129 @@ Linked List - Easy 2
 
 
 
-New
+143. Reorder List
 --------------------
 
 .. code-block:: python
 
+    Given a singly linked list L: L0?L1?��?Ln-1?Ln,
+    reorder it to: L0?Ln?L1?Ln-1?L2?Ln-2?��
 
-=================================================================
+
+    You must do this in-place without altering the nodes' values.
+
+
+    For example,
+    Given {1,2,3,4}, reorder it to {1,4,2,3}.
 
 
 
-=================================================================
+    =================================================================
+    class Solution(object):
+      def reorderList(self, head):
+        """
+        :type head: ListNode
+        :rtype: void Do not return anything, modify head in-place instead.
+        """
+
+        def reverse(root):
+          pre = None
+          cur = root
+          while cur:
+            next = cur.next
+            cur.next = pre
+            pre = cur
+            cur = next
+          return pre
+
+        if not head or not head.next:
+          return
+        slow = fast = head
+        pre = None
+        while fast and fast.next:
+          pre = slow
+          slow = slow.next
+          fast = fast.next.next
+        if pre:
+          pre.next = None
+        newHead = reverse(slow)
+        ret = dummy = ListNode(-1)
+        p1 = head
+        p2 = newHead
+        while p1 and p2:
+          dummy.next = p1
+          p1 = p1.next
+          dummy = dummy.next
+          dummy.next = p2
+          p2 = p2.next
+          dummy = dummy.next
+
+        if p2:
+          dummy.next = p2
+        head.next = ret.next.next
+
+
+
+    =================================================================
+    class Solution(object):
+        def reorderList(self, head):
+            """
+            Firstly, use two pointer to find the mid node_keep,
+            Then reverse the post half nodes, and merge the pre half and
+            post reversed half.
+            """
+            if not head or not head.next or not head.next.next:
+                return
+            slow = fast = head
+            while fast.next:
+                if fast.next.next:
+                    slow = slow.next
+                    fast = fast.next.next
+                else:
+                    break
+
+            post_half_start = slow.next
+            slow.next = None
+            reverse_head = self.reverse_list(post_half_start)
+            while head and reverse_head:
+                node_keep = head.next
+                reverse_node_keep = reverse_head.next
+                head.next = reverse_head
+                reverse_head.next = node_keep
+                head = node_keep
+                reverse_head = reverse_node_keep
+
+        # Reverse a linked list
+        def reverse_list(self, head):
+            pre_node = None
+            post_node = None
+            while head:
+                post_node = head.next
+                head.next = pre_node
+                pre_node = head
+                head = post_node
+
+            return pre_node
+
+        # RuntimeError: maximum recursion depth exceeded
+        """
+        def reverse_list(self, head):
+            if not head.next:
+                return head
+            next_node = head.next
+            new_head = self.reverse_list(next_node)
+            next_node.next = head
+            head.next = None
+            return new_head
+        """
+
+    """
+    []
+    [1]
+    [1,2]
+    [1,2,3,4,5,6]
+    [1,2,3,4,5]
+    """
 
 
 
