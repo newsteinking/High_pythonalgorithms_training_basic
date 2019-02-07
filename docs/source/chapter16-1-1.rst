@@ -836,70 +836,270 @@ Linked List - Easy 2
 
 
 
-New
+147. Insertion sort list
+------------------------------
+
+.. code-block:: python
+
+    Sort a linked list using insertion sort.
+
+    =================================================================
+    class Solution(object):
+      def insertionSortList(self, head):
+        p = dummy = ListNode(0)
+        cur = dummy.next = head
+        while cur and cur.next:
+          val = cur.next.val
+          if cur.val < val:
+            cur = cur.next
+            continue
+          if p.next.val > val:
+            p = dummy
+          while p.next.val < val:
+            p = p.next
+          new = cur.next
+          cur.next = new.next
+          new.next = p.next
+          p.next = new
+        return dummy.next
+
+
+
+    =================================================================
+    class Solution(object):
+        def insertionSortList(self, head):
+            if not head or not head.next:
+                return head
+
+            dummy = ListNode(0)
+            start = dummy
+            while head:
+                cur_node = head
+                head = head.next
+                # Don't need to scan from head of the sorted list every time.
+                if start.val > cur_node.val:
+                    start = dummy
+                # Find the insert position.
+                while start.next and start.next.val < cur_node.val:
+                    start = start.next
+                # Insert the current node.
+                cur_node.next = start.next
+                start.next = cur_node
+
+            return dummy.next
+    """
+    []
+    [1]
+    [1,2]
+    [5,1,2]
+    [5,1,2,3]
+    """
+
+
+148. Sort List
 --------------------
 
 .. code-block:: python
 
+    Sort a linked list in O(n log n) time using constant space complexity.
 
-=================================================================
+    =================================================================
+    class Solution(object):
+      def sortList(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        if head:
+          fast = slow = head
+          pre = None
+
+          while fast and fast.next:
+            pre = slow
+            slow = slow.next
+            fast = fast.next.next
+
+          if not pre:
+            return head
+          pre.next = None
+
+          left = self.sortList(head)
+          right = self.sortList(slow)
+
+          p = dummy = ListNode(-1)
+          while left and right:
+            if left.val < right.val:
+              p.next = left
+              left = left.next
+            else:
+              p.next = right
+              right = right.next
+            p = p.next
+
+          if left:
+            p.next = left
+          if right:
+            p.next = right
+          return dummy.next
 
 
 
-=================================================================
+    =================================================================
+    # Merge Sort
+    class Solution(object):
+        def sortList(self, head):
+            if not head or not head.next:
+                return head
+            # Get the two half parts.
+            pre_slow = None
+            slow = fast = head
+            while fast and fast.next:
+                pre_slow = slow
+                slow = slow.next
+                fast = fast.next.next
+            pre_slow.next = None        # Cut the linked list to two parts.
+            left_list = self.sortList(head)
+            right_list = self.sortList(slow)
+            return self.merge(left_list, right_list)
+
+        # Operator merge.
+        def merge(self, left_list, right_list):
+            pre_head = dummy = ListNode(None)
+            while left_list and right_list:
+                if left_list.val < right_list.val:
+                    dummy.next = left_list
+                    left_list = left_list.next
+                else:
+                    dummy.next = right_list
+                    right_list = right_list.next
+                dummy = dummy.next
+
+            dummy.next = left_list or right_list
+
+            return pre_head.next
+
+
+    # Quick sort:  Time Limit Exceeded
+    class Solution_2(object):
+        def partition(self, begin, end):
+            if not begin or begin.next == end:
+                return begin
+            pivot = begin.val
+            keep, pos = begin, begin
+            scan = begin.next
+            while scan != end:
+                if scan.val <= pivot:
+                    pos = pos.next
+                    if scan != pos:
+                        scan.val, pos.val = pos.val, scan.val
+                scan = scan.next
+
+            pos.val, keep.val = keep.val, pos.val
+            return pos
+
+        def quick_sort(self, begin, end):
+            if begin == end or begin.next == end:
+                return begin
+
+            pos = self.partition(begin, end)
+            head = self.quick_sort(begin, pos)
+            self.quick_sort(pos.next, end)
+            return head
+
+        def sortList(self, head):
+            return self.quick_sort(head, None)
+
+    """
+    []
+    [1]
+    [1,2]
+    [5,1,2]
+    [5,1,2,3]
+    [5,1,2,3,6,7,8,9,12,2]
+    """
 
 
 
-New
---------------------
+328. Odd Even Linked List
+------------------------------------
 
 .. code-block:: python
 
+    Given a singly linked list, group all odd nodes together followed by the even nodes. Please note here we are talking about the node number and not the value in the nodes.
 
-=================================================================
-
-
-
-=================================================================
+    You should try to do it in place. The program should run in O(1) space complexity and O(nodes) time complexity.
 
 
-
-New
---------------------
-
-.. code-block:: python
+    Example:
+    Given 1->2->3->4->5->NULL,
+    return 1->3->5->2->4->NULL.
 
 
-=================================================================
+    Note:
+    The relative order inside both the even and odd groups should remain as it was in the input.
+    The first node is considered odd, the second node even and so on ...
 
 
-
-=================================================================
-
+    Credits:Special thanks to @DjangoUnchained for adding this problem and creating all test cases.
 
 
-New
---------------------
-
-.. code-block:: python
-
-
-=================================================================
-
-
-
-=================================================================
-
-
-
-New
---------------------
-
-.. code-block:: python
-
-
-=================================================================
+    =================================================================
+    class Solution(object):
+      def oddEvenList(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        o = odd = ListNode(-1)
+        e = even = ListNode(-1)
+        p = head
+        isOdd = True
+        while p:
+          if isOdd:
+            o.next = p
+            o = o.next
+            isOdd = False
+          else:
+            e.next = p
+            isOdd = True
+            e = e.next
+          p = p.next
+        e.next = None
+        o.next = even.next
+        return odd.next
 
 
 
-=================================================================
+    =================================================================
+    class Solution(object):
+        def oddEvenList(self, head):
+            if not head or not head.next:
+                return head
+
+            odd = ListNode(0)
+            even = ListNode(0)
+            pre_head = odd
+            pre_mid = even
+            odd_even_dict = {0: even, 1: odd}
+            count = 0
+            while head:
+                count += 1
+                odd_even_dict[count & 1].next = head
+                odd_even_dict[count & 1] = head
+                head = head.next
+
+            odd_even_dict[0].next = None
+            odd_even_dict[1].next = pre_mid.next
+            return pre_head.next
+
+    """
+    []
+    [1]
+    [1,2]
+    [1,2,3]
+    [1,2,3,4,5,6,7,8]
+    """
+
+
+
+
