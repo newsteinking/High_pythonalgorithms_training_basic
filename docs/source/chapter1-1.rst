@@ -9,31 +9,31 @@ Array - Easy
 1.Two Sum
 --------------------
 
+주어진 정수 배열을 이용하여 두 숫자의 인덱스를 반환하여 특정 대상에 합산합니다.
+
+각 입력에는 정확히 하나의 솔루션이 있다고 가정 할 수 있으며 동일한 요소를 두 번 사용할 수 없습니다
+
+Example:
+Given nums = [2, 7, 11, 15], target = 9,
+
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+
+힌트:Dictionary를 사용하여 두 항을 뺀 값을 계속 넣어준다.
+
+
+===========================================================
+Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+Example:
+Given nums = [2, 7, 11, 15], target = 9,
+
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+
 .. code-block:: python
-
-    주어진 정수 배열을 이용하여 두 숫자의 인덱스를 반환하여 특정 대상에 합산합니다.
-
-    각 입력에는 정확히 하나의 솔루션이 있다고 가정 할 수 있으며 동일한 요소를 두 번 사용할 수 없습니다
-
-    Example:
-    Given nums = [2, 7, 11, 15], target = 9,
-
-    Because nums[0] + nums[1] = 2 + 7 = 9,
-    return [0, 1].
-
-    힌트:Dictionary를 사용하여 두 항을 뺀 값을 계속 넣어준다.
-    
-
-    ===========================================================
-    Given an array of integers, return indices of the two numbers such that they add up to a specific target.
-
-    You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-    Example:
-    Given nums = [2, 7, 11, 15], target = 9,
-
-    Because nums[0] + nums[1] = 2 + 7 = 9,
-    return [0, 1].
 
 
 
