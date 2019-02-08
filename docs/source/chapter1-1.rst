@@ -411,22 +411,28 @@ Enter number of rows: 5
           print(trow)
           trow=[l+r for l,r in zip(trow+y, y+trow)]
        return n>=1
-    pascal_triangle(6) 
+    pascal_triangle(6)
 
 119. Pascal's Triangle 2
 -------------------------------
 
+[1, 1]
+[1, 2, 1]
+[1, 3, 3, 1]
+[1, 4, 6, 4, 1]
+[1, 5, 10, 10, 5, 1]
+[1, 5, 10, 10, 5, 1]
+
+
+Given an index k, return the kth row of the Pascal's triangle.
+
+For example, given k = 3,
+Return [1,3,3,1].
+
 .. code-block:: python
 
 
-    """
 
-    Given an index k, return the kth row of the Pascal's triangle.
-
-    For example, given k = 3,
-    Return [1,3,3,1].
-
-    """
 
     class Solution(object):
         def getRow(self, rowIndex):
@@ -437,6 +443,7 @@ Enter number of rows: 5
             res = [1]
             for i in range(1, rowIndex + 1):
                 res = list(map(lambda x, y: x + y, res + [0], [0] + res))
+                print(res)
             return res
 
 
