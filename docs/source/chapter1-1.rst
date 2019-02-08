@@ -57,9 +57,9 @@ return [0, 1].
 
 배열과 값이 주어지면 해당 값의 인스턴스를 모두 제거하고 새 길이를 반환합니다.
 
-다른 배열을 위해 여분의 공간을 할당하지 마십시오. 일정한 메모리를 가지고이를 수행해야합니다.
+다른 배열을 위해 여분의 공간을 할당하지 마십시오. 일정한 메모리를 가지고 이를 수행해야합니다.
 
-요소의 순서를 변경할 수 있습니다. 새로운 길이를 넘어 무엇을 떠나야할지 상관 없습니다.
+요소의 순서를 변경할 수 있습니다. 새로운 길이를 넘어 무엇을 남겨야할지  상관 없습니다.
 
 
 Given an array and a value, remove all instances of that value in place and return the new length.
@@ -99,22 +99,21 @@ Subscribe to see which companies asked this question.
 35.Search Insert Position
 -------------------------------
 
+정렬 된 배열과 대상 값이 주어지면 대상을 찾으면 색인을 반환합니다. 그렇지 않은 경우 색인이 순서대로 삽입 된 경우 색인을 리턴하십시오.
+
+
+Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+
+You may assume no duplicates in the array.
+
+Here are few examples.
+[1,3,5,6], 5  2
+[1,3,5,6], 2   1
+[1,3,5,6], 7   4
+[1,3,5,6], 0   0
+
 .. code-block:: python
 
-
-    """
-
-    Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
-
-    You may assume no duplicates in the array.
-
-    Here are few examples.
-    [1,3,5,6], 5  2
-    [1,3,5,6], 2   1
-    [1,3,5,6], 7   4
-    [1,3,5,6], 0   0
-
-    """
 
 
     class Solution(object):
