@@ -656,28 +656,24 @@ Special thanks to @ts for adding this problem and creating all test cases.
 189. Rotate Array
 -------------------------------
 
+Rotate an array of n elements to the right by k steps.
+
+For example, with n = 7 and k = 3, the array [1,2,3,4,5,6,7] is rotated to [5,6,7,1,2,3,4].
+
+Note:
+Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
+
+[show hint]
+
+Related problem: Reverse Words in a String II
+
+Credits:
+Special thanks to @Freezen for adding this problem and creating all test cases.
+
+Subscribe to see which companies asked this question.
+
+
 .. code-block:: python
-
-
-    """
-
-    Rotate an array of n elements to the right by k steps.
-
-    For example, with n = 7 and k = 3, the array [1,2,3,4,5,6,7] is rotated to [5,6,7,1,2,3,4].
-
-    Note:
-    Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
-
-    [show hint]
-
-    Related problem: Reverse Words in a String II
-
-    Credits:
-    Special thanks to @Freezen for adding this problem and creating all test cases.
-
-    Subscribe to see which companies asked this question.
-
-    """
 
     class Solution(object):
         def rotate(self, nums, k):
@@ -689,20 +685,36 @@ Special thanks to @ts for adding this problem and creating all test cases.
             n = len(nums)
             nums[:] = nums[n - k:] + nums[:n - k]
 
+            return nums
+
+
+    test=Solution()
+    print(test.rotate([1,2,3,4,5,6,7], 3))
+
+    ========================================
+    from collections import deque
+    d=deque([1,2,3,4,5])
+    print(d)
+    deque([1, 2, 3, 4, 5])
+    d.rotate(2)
+    print(d)
+
 
 
 217. Contains Duplicate
 -------------------------------
 
+
+Given an array of integers, find if the array contains any duplicates.
+Your function should return true if any value appears at least twice in the array,
+and it should return false if every element is distinct.
+
+Subscribe to see which companies asked this question.
+
+
 .. code-block:: python
 
-    """
 
-    Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
-
-    Subscribe to see which companies asked this question.
-
-    """
 
     class Solution(object):
         def containsDuplicate(self, nums):
@@ -720,7 +732,7 @@ Special thanks to @ts for adding this problem and creating all test cases.
             return False
 
 
-    class Solution(object):
+    class Solution2(object):
         def containsDuplicate(self, nums):
             """
             :type nums: List[int]
@@ -732,13 +744,15 @@ Special thanks to @ts for adding this problem and creating all test cases.
 219. Contains Duplicate 2
 -------------------------------
 
+정수 배열과 정수 k가 주어지면 두 개의 다른 인덱스 i가 있는지 알아보십시오.
+와 j가 배열에서 nums [i] = nums [j]이고 i와 j의 절대 차가 많아야 k가되도록 배열에 넣습니다.
+
+Given an array of integers and an integer k, find out whether there are two distinct indices i
+and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
+
 .. code-block:: python
 
-    """
 
-    Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
-
-    """
 
     class Solution(object):
         def containsNearbyDuplicate(self, nums, k):
