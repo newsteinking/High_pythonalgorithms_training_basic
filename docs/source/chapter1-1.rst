@@ -772,18 +772,18 @@ and j in the array such that nums[i] = nums[j] and the absolute difference betwe
 268. Missing Number
 -------------------------------
 
+Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
+
+For example,
+Given nums = [0, 1, 3] return 2.
+
+Note:
+Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?
+
+
 .. code-block:: python
 
-    """
-    Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
 
-    For example,
-    Given nums = [0, 1, 3] return 2.
-
-    Note:
-    Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?
-
-    """
     class Solution(object):
         def missingNumber(self, nums):
             """
@@ -798,21 +798,23 @@ and j in the array such that nums[i] = nums[j] and the absolute difference betwe
 283. Move Zeroes
 -------------------------------
 
+
+핵심)Array에서 0은 모두 끝쪽으로 보내는 알고리즘
+
+Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+
+For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
+
+Note:
+You must do this in-place without making a copy of the array.
+Minimize the total number of operations.
+Credits:
+Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.
+
+
 .. code-block:: python
 
-    """
 
-    Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
-
-    For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
-
-    Note:
-    You must do this in-place without making a copy of the array.
-    Minimize the total number of operations.
-    Credits:
-    Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.
-
-    """
 
     class Solution(object):
         def moveZeroes(self, nums):
@@ -832,33 +834,37 @@ and j in the array such that nums[i] = nums[j] and the absolute difference betwe
 414. Third Maximum Number
 -------------------------------
 
+핵심) Array에서 3번째 큰수를 찾는 알고리즘
+      3번째 수가 없으면 가장 큰수를 리턴하고
+      동일 숫자는 하나로 취급한다.
+
+Given a non-empty array of integers, return the third maximum number in this array.
+If it does not exist, return the maximum number. The time complexity must be in O(n).
+
+Example 1:
+Input: [3, 2, 1]
+
+Output: 1
+
+Explanation: The third maximum is 1.
+Example 2:
+Input: [1, 2]
+
+Output: 2
+
+Explanation: The third maximum does not exist, so the maximum (2) is returned instead.
+Example 3:
+Input: [2, 2, 3, 1]
+
+Output: 1
+
+Explanation: Note that the third maximum here means the third maximum distinct number.
+Both numbers with value 2 are both considered as second maximum.
+
+
 .. code-block:: python
 
-    """
 
-    Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).
-
-    Example 1:
-    Input: [3, 2, 1]
-
-    Output: 1
-
-    Explanation: The third maximum is 1.
-    Example 2:
-    Input: [1, 2]
-
-    Output: 2
-
-    Explanation: The third maximum does not exist, so the maximum (2) is returned instead.
-    Example 3:
-    Input: [2, 2, 3, 1]
-
-    Output: 1
-
-    Explanation: Note that the third maximum here means the third maximum distinct number.
-    Both numbers with value 2 are both considered as second maximum.
-
-    """
 
     class Solution(object):
         def thirdMax(self, nums):
@@ -877,28 +883,83 @@ and j in the array such that nums[i] = nums[j] and the absolute difference betwe
                     max3 = num
             return max1 if max3==None else max3
 
+    ==================================================
+    class Solution(object):
+        def thirdMax(self, nums):
+            l = []
+            for n in set(nums):
+                bisect.insort(l, -n)
+                if len(l)>3:
+                    l.pop()
+            return -l[2] if len(l)>2 else -l[0]
+
+    ============================================
+    import sys
+    def thirdLargest(arr, arr_size):
+
+        # There should be
+        # atleast three elements
+        if (arr_size < 3):
+
+            print(" Invalid Input ")
+            return
+
+
+        # Find first
+        # largest element
+        first = arr[0]
+        for i in range(1, arr_size):
+            if (arr[i] > first):
+                first = arr[i]
+
+        # Find second
+        # largest element
+        second = -sys.maxsize
+        for i in range(0, arr_size):
+            if (arr[i] > second and
+                arr[i] < first):
+                second = arr[i]
+
+        # Find third
+        # largest element
+        third = -sys.maxsize
+        for i in range(0, arr_size):
+            if (arr[i] > third and
+                arr[i] < second):
+                third = arr[i]
+
+        print("The Third Largest",
+              "element is", third)
+
+    # Driver Code
+    arr = [12, 13, 1,
+           10, 34, 16]
+    n = len(arr)
+    thirdLargest(arr, n)
+
+    # This code is contributed
+    # by Smitha
+
 448. Find All Numbers Disappeared in Array
 -------------------------------------------------
 
+
+Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
+
+Find all the elements of [1, n] inclusive that do not appear in this array.
+
+Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
+Example:
+
+Input:
+[4,3,2,7,8,2,3,1]
+
+Output:
+[5,6]
+
 .. code-block:: python
 
-    """
 
-    Given an array of integers where 1  xxxxx  n (n = size of array), some elements appear twice and others appear once.
-
-    Find all the elements of [1, n] inclusive that do not appear in this array.
-
-    Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
-
-    Example:
-
-    Input:
-    [4,3,2,7,8,2,3,1]
-
-    Output:
-    [5,6]
-
-    """
 
     class Solution(object):
         def findDisappearedNumbers(self, nums):
@@ -916,24 +977,20 @@ and j in the array such that nums[i] = nums[j] and the absolute difference betwe
 485. Max Consecutive Ones
 -------------------------------
 
+Given a binary array, find the maximum number of consecutive 1st in this array.
+
+Example 1:
+Input: [1,1,0,1,1,1]
+Output: 3
+Explanation: The first two digits or the last three digits are consecutive 1s.
+    The maximum number of consecutive 1s is 3.
+Note:
+
+The input array will only contain 0 and 1.
+The length of input array is a positive integer and will not exceed 10,000
+
 .. code-block:: python
 
-
-    """
-
-    Given a binary array, find the maximum number of consecutive 1s in this array.
-
-    Example 1:
-    Input: [1,1,0,1,1,1]
-    Output: 3
-    Explanation: The first two digits or the last three digits are consecutive 1s.
-        The maximum number of consecutive 1s is 3.
-    Note:
-
-    The input array will only contain 0 and 1.
-    The length of input array is a positive integer and will not exceed 10,000
-
-    """
 
     class Solution(object):
         def findMaxConsecutiveOnes(self, nums):
@@ -954,31 +1011,27 @@ and j in the array such that nums[i] = nums[j] and the absolute difference betwe
 532. K-diff Pairs in an Array
 -------------------------------
 
+Given an array of integers and an integer k, you need to find the number of unique k-diff pairs in the array. Here a k-diff pair is defined as an integer pair (i, j), where i and j are both numbers in the array and their absolute difference is k.
+
+Example 1:
+Input: [3, 1, 4, 1, 5], k = 2
+Output: 2
+Explanation: There are two 2-diff pairs in the array, (1, 3) and (3, 5).
+Although we have two 1s in the input, we should only return the number of unique pairs.
+Example 2:
+Input:[1, 2, 3, 4, 5], k = 1
+Output: 4
+Explanation: There are four 1-diff pairs in the array, (1, 2), (2, 3), (3, 4) and (4, 5).
+Example 3:
+Input: [1, 3, 1, 5, 4], k = 0
+Output: 1
+Explanation: There is one 0-diff pair in the array, (1, 1).
+Note:
+The pairs (i, j) and (j, i) count as the same pair.
+The length of the array won't exceed 10,000.
+All the integers in the given input belong to the range: [-1e7, 1e7].
+
 .. code-block:: python
-
-    """
-
-    Given an array of integers and an integer k, you need to find the number of unique k-diff pairs in the array. Here a k-diff pair is defined as an integer pair (i, j), where i and j are both numbers in the array and their absolute difference is k.
-
-    Example 1:
-    Input: [3, 1, 4, 1, 5], k = 2
-    Output: 2
-    Explanation: There are two 2-diff pairs in the array, (1, 3) and (3, 5).
-    Although we have two 1s in the input, we should only return the number of unique pairs.
-    Example 2:
-    Input:[1, 2, 3, 4, 5], k = 1
-    Output: 4
-    Explanation: There are four 1-diff pairs in the array, (1, 2), (2, 3), (3, 4) and (4, 5).
-    Example 3:
-    Input: [1, 3, 1, 5, 4], k = 0
-    Output: 1
-    Explanation: There is one 0-diff pair in the array, (1, 1).
-    Note:
-    The pairs (i, j) and (j, i) count as the same pair.
-    The length of the array won't exceed 10,000.
-    All the integers in the given input belong to the range: [-1e7, 1e7].
-
-    """
 
 
     class Solution(object):
@@ -1003,23 +1056,20 @@ and j in the array such that nums[i] = nums[j] and the absolute difference betwe
 561. Array Partition 1
 -------------------------------
 
+Given an array of 2nd integers, your task is to group these integers into n pairs of integer,
+say (a1, b1), (a2, b2), ..., (an, bn) which makes sum of min(ai, bi) for all i from 1 to n as large as possible.
+
+Example 1:
+Input: [1,4,3,2]
+
+Output: 4
+Explanation: n is 2, and the maximum sum of pairs is 4 = min(1, 2) + min(3, 4).
+Note:
+n is a positive integer, which is in the range of [1, 10000].
+All the integers in the array will be in the range of [-10000, 10000].
+
+
 .. code-block:: python
-
-
-    """
-
-    Given an array of 2n integers, your task is to group these integers into n pairs of integer, say (a1, b1), (a2, b2), ..., (an, bn) which makes sum of min(ai, bi) for all i from 1 to n as large as possible.
-
-    Example 1:
-    Input: [1,4,3,2]
-
-    Output: 4
-    Explanation: n is 2, and the maximum sum of pairs is 4 = min(1, 2) + min(3, 4).
-    Note:
-    n is a positive integer, which is in the range of [1, 10000].
-    All the integers in the array will be in the range of [-10000, 10000].
-
-    """
 
 
     class Solution(object):
@@ -1034,44 +1084,44 @@ and j in the array such that nums[i] = nums[j] and the absolute difference betwe
 566. Reshape the Matrix
 -------------------------------
 
+In MATLAB, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different size but keep its original data.
+
+You're given a matrix represented by a two-dimensional array, and two positive integers r and c representing the row number and column number of the wanted reshaped matrix, respectively.
+
+The reshaped matrix need to be filled with all the elements of the original matrix in the same row-traversing order as they were.
+
+If the 'reshape' operation with given parameters is possible and legal, output the new reshaped matrix; Otherwise, output the original matrix.
+
+Example 1:
+Input:
+nums =
+[[1,2],
+ [3,4]]
+r = 1, c = 4
+Output:
+[[1,2,3,4]]
+Explanation:
+The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, fill it row by row by using the previous list.
+Example 2:
+Input:
+nums =
+[[1,2],
+ [3,4]]
+r = 2, c = 4
+Output:
+[[1,2],
+ [3,4]]
+Explanation:
+There is no way to reshape a 2 * 2 matrix to a 2 * 4 matrix. So output the original matrix.
+Note:
+The height and width of the given matrix is in range [1, 100].
+The given r and c are all positive.
+
+
+
 .. code-block:: python
 
-    """
 
-    In MATLAB, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different size but keep its original data.
-
-    You're given a matrix represented by a two-dimensional array, and two positive integers r and c representing the row number and column number of the wanted reshaped matrix, respectively.
-
-    The reshaped matrix need to be filled with all the elements of the original matrix in the same row-traversing order as they were.
-
-    If the 'reshape' operation with given parameters is possible and legal, output the new reshaped matrix; Otherwise, output the original matrix.
-
-    Example 1:
-    Input:
-    nums =
-    [[1,2],
-     [3,4]]
-    r = 1, c = 4
-    Output:
-    [[1,2,3,4]]
-    Explanation:
-    The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, fill it row by row by using the previous list.
-    Example 2:
-    Input:
-    nums =
-    [[1,2],
-     [3,4]]
-    r = 2, c = 4
-    Output:
-    [[1,2],
-     [3,4]]
-    Explanation:
-    There is no way to reshape a 2 * 2 matrix to a 2 * 4 matrix. So output the original matrix.
-    Note:
-    The height and width of the given matrix is in range [1, 100].
-    The given r and c are all positive.
-
-    """
 
     class Solution(object):
         def matrixReshape(self, nums, r, c):
@@ -1092,24 +1142,23 @@ and j in the array such that nums[i] = nums[j] and the absolute difference betwe
 581. Shortest Unsorted Continuous Subarray
 ---------------------------------------------------
 
+
+Given an integer array, you need to find one continuous subarray that if you only sort this subarray in ascending order, then the whole array will be sorted in ascending order, too.
+
+You need to find the shortest such subarray and output its length.
+
+Example 1:
+Input: [2, 6, 4, 8, 10, 9, 15]
+Output: 5
+Explanation: You need to sort [6, 4, 8, 10, 9] in ascending order to make the whole array sorted in ascending order.
+Note:
+Then length of the input array is in range [1, 10,000].
+The input array may contain duplicates, so ascending order here means <=.
+
 .. code-block:: python
 
 
-    """
 
-    Given an integer array, you need to find one continuous subarray that if you only sort this subarray in ascending order, then the whole array will be sorted in ascending order, too.
-
-    You need to find the shortest such subarray and output its length.
-
-    Example 1:
-    Input: [2, 6, 4, 8, 10, 9, 15]
-    Output: 5
-    Explanation: You need to sort [6, 4, 8, 10, 9] in ascending order to make the whole array sorted in ascending order.
-    Note:
-    Then length of the input array is in range [1, 10,000].
-    The input array may contain duplicates, so ascending order here means <=.
-
-    """
 
     class Solution(object):
         def findUnsortedSubarray(self, nums):
