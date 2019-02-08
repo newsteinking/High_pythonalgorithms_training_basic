@@ -22,7 +22,7 @@ return [0, 1].
 힌트:Dictionary를 사용하여 두 항을 뺀 값을 계속 넣어준다.
 
 
-===========================================================
+
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -55,24 +55,31 @@ return [0, 1].
 27.Remove Element
 --------------------------
 
+배열과 값이 주어지면 해당 값의 인스턴스를 모두 제거하고 새 길이를 반환합니다.
+
+다른 배열을 위해 여분의 공간을 할당하지 마십시오. 일정한 메모리를 가지고이를 수행해야합니다.
+
+요소의 순서를 변경할 수 있습니다. 새로운 길이를 넘어 무엇을 떠나야할지 상관 없습니다.
+
+
+Given an array and a value, remove all instances of that value in place and return the new length.
+
+Do not allocate extra space for another array, you must do this in place with constant memory.
+
+The order of elements can be changed. It doesn't matter what you leave beyond the new length.
+
+Example:
+Given input array nums = [3,2,2,3], val = 3
+
+Your function should return length = 2, with the first two elements of nums being 2.
+
+Subscribe to see which companies asked this question.
+
+
 .. code-block:: python
 
-    """
 
-    Given an array and a value, remove all instances of that value in place and return the new length.
 
-    Do not allocate extra space for another array, you must do this in place with constant memory.
-
-    The order of elements can be changed. It doesn't matter what you leave beyond the new length.
-
-    Example:
-    Given input array nums = [3,2,2,3], val = 3
-
-    Your function should return length = 2, with the first two elements of nums being 2.
-
-    Subscribe to see which companies asked this question.
-
-    """
 
 
     class Solution(object):
