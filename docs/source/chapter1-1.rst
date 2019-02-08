@@ -203,19 +203,31 @@ The digits are stored such that the most significant digit is at the head of the
 88. Merge Sorted Array
 -------------------------------
 
+두 개의 정렬 된 정수 배열 nums1과 nums2가 주어지면 nums2를 nums1에 하나의 정렬 된 배열로 병합하십시오.
+
+노트 :
+nums1에는 nums2의 추가 요소를 보유 할 수있는 충분한 공간 (m + n보다 크거나 같은 크기)이 있다고 가정 할 수 있습니다.
+nums1과 nums2에서 초기화되는 요소의 수는 각각 m과 n입니다.
+
+Input:
+nums1 = [1,2,3,0,0,0], m = 3
+nums2 = [2,5,6],       n = 3
+
+Output: [1,2,2,3,5,6]
+
+
+Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+
+Note:
+You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.
+The number of elements initialized in nums1 and nums2 are m and n respectively.
+
+
+
+
 .. code-block:: python
 
 
-    """
-
-    Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
-
-    Note:
-    You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2. The number of elements initialized in nums1 and nums2 are m and n respectively.
-
-    Subscribe to see which companies asked this question.
-
-    """
 
     class Solution(object):
         def merge(self, nums1, m, nums2, n):
@@ -235,6 +247,88 @@ The digits are stored such that the most significant digit is at the head of the
                     n = n - 1
             if n > 0:
                 nums1[:n] = nums2[:n]
+
+
+88.2 Merge Sorted Array 2
+-------------------------------
+
+ 두 array 크기만큼 합치고 정렬하는 문제이다.
+
+
+Input :  arr1[] = { 1, 3, 4, 5}
+         arr2[] = {2, 4, 6, 8}
+Output : arr3[] = {1, 2, 3, 4, 5, 6, 7, 8}
+
+Input  : arr1[] = { 5, 8, 9}
+         arr2[] = {4, 7, 8}
+Output : arr3[] = {4, 5, 7, 8, 8, 9}
+
+
+.. code-block:: python
+
+
+    class Solution(object):
+
+        def mergeArrays(self,arr1, arr2, n1, n2):
+            arr3 = [None] * (n1 + n2)
+            i = 0
+            j = 0
+            k = 0
+
+            # Traverse both array
+            while i < n1 and j < n2:
+
+                # Check if current element
+                # of first array is smaller
+                # than current element of
+                # second array. If yes,
+                # store first array element
+                # and increment first array
+                # index. Otherwise do same
+                # with second array
+                if arr1[i] < arr2[j]:
+                    arr3[k] = arr1[i]
+                    k = k + 1
+                    i = i + 1
+                else:
+                    arr3[k] = arr2[j]
+                    k = k + 1
+                    j = j + 1
+
+
+            # Store remaining elements
+            # of first array
+            while i < n1:
+                arr3[k] = arr1[i];
+                k = k + 1
+                i = i + 1
+
+            # Store remaining elements
+            # of second array
+            while j < n2:
+                arr3[k] = arr2[j];
+                k = k + 1
+                j = j + 1
+            print("Array after merging")
+            for i in range(n1 + n2):
+                print(str(arr3[i]), end = " ")
+
+
+    sam=Solution()
+
+    # Driver code
+    arr1 = [1, 3, 5, 7]
+    n1 = len(arr1)
+
+    arr2 = [2, 4, 6, 8]
+    n2 = len(arr2)
+
+
+
+print(sam.mergeArrays(arr1,arr2,n1,n2))
+
+
+
 
 
 118. Pascal's Triangle
