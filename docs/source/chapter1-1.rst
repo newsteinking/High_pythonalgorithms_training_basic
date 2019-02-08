@@ -174,6 +174,8 @@ the contiguous subarray [4,-1,2,1] has the largest sum = 6.
 
 가장 중요한 자릿수가 목록의 머리에 있도록 자릿수가 저장됩니다.
 
+ex) [3,4,5,6,7]  ==> 34567 ==> 34567+1 ===> 345678 ==> [3,4,5,6,7,8]
+
 
 Given a non-negative integer represented as a non-empty array of digits, plus one to the integer.
 
