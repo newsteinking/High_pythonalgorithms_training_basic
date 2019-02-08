@@ -746,6 +746,7 @@ Subscribe to see which companies asked this question.
 
 정수 배열과 정수 k가 주어지면 두 개의 다른 인덱스 i가 있는지 알아보십시오.
 와 j가 배열에서 nums [i] = nums [j]이고 i와 j의 절대 차가 많아야 k가되도록 배열에 넣습니다.
+핵심) 주어진 숫자 K값 범위 안에 반복되는 숫자가 있는지 확인하는 것임
 
 Given an array of integers and an integer k, find out whether there are two distinct indices i
 and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
