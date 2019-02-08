@@ -168,18 +168,23 @@ the contiguous subarray [4,-1,2,1] has the largest sum = 6.
 66.Plus One
 -------------------------------
 
+비어 있지 않은 정수가 아닌 숫자의 배열로 표현되고, 정수에 1을 더한 값이 주어집니다.
+
+숫자 0 그 자체를 제외하고 앞에 0을 포함하지 않는 정수로 가정 할 수 있습니다.
+
+가장 중요한 자릿수가 목록의 머리에 있도록 자릿수가 저장됩니다.
+
+
+Given a non-negative integer represented as a non-empty array of digits, plus one to the integer.
+
+You may assume the integer do not contain any leading zero, except the number 0 itself.
+
+The digits are stored such that the most significant digit is at the head of the list.
+
+
 .. code-block:: python
 
 
-    """
-
-    Given a non-negative integer represented as a non-empty array of digits, plus one to the integer.
-
-    You may assume the integer do not contain any leading zero, except the number 0 itself.
-
-    The digits are stored such that the most significant digit is at the head of the list.
-
-    """
 
     class Solution(object):
         def plusOne(self, digits):
