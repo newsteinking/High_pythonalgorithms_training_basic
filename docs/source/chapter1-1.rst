@@ -334,25 +334,23 @@ print(sam.mergeArrays(arr1,arr2,n1,n2))
 118. Pascal's Triangle
 -------------------------------
 
+
+Given numRows, generate the first numRows of Pascal's triangle.
+
+For example, given numRows = 5,
+Return
+
+[
+     [1],
+    [1,1],
+   [1,2,1],
+  [1,3,3,1],
+ [1,4,6,4,1]
+]
+Subscribe to see which companies asked this question.
+
 .. code-block:: python
 
-    """
-
-    Given numRows, generate the first numRows of Pascal's triangle.
-
-    For example, given numRows = 5,
-    Return
-
-    [
-         [1],
-        [1,1],
-       [1,2,1],
-      [1,3,3,1],
-     [1,4,6,4,1]
-    ]
-    Subscribe to see which companies asked this question.
-
-    """
 
 
     class Solution(object):
@@ -366,6 +364,54 @@ print(sam.mergeArrays(arr1,arr2,n1,n2))
             for i in range(1,numRows):
                 res.append(map(lambda x,y:x+y,res[-1]+[0],[0]+res[-1]))
             return res
+
+118.2 Pascal's Triangle
+-------------------------------
+Enter number of rows: 5
+                     1
+                  1      1
+               1      2      1
+            1      3      3      1
+         1      4      6      4      1
+
+
+.. code-block:: python
+
+
+    n=int(input("Enter number of rows: "))
+    a=[]
+    for i in range(n):
+        a.append([])
+        a[i].append(1)
+        for j in range(1,i):
+            a[i].append(a[i-1][j-1]+a[i-1][j])
+        if(n!=0):
+            a[i].append(1)
+    for i in range(n):
+        print("   "*(n-i),end=" ",sep=" ")
+        for j in range(0,i+1):
+            print('{0:6}'.format(a[i][j]),end=" ",sep=" ")
+        print()
+
+118.3 Pascal's Triangle 3
+-------------------------------
+[1]
+[1, 1]
+[1, 2, 1]
+[1, 3, 3, 1]
+[1, 4, 6, 4, 1]
+[1, 5, 10, 10, 5, 1]
+
+.. code-block:: python
+
+    def pascal_triangle(n):
+       trow = [1]
+       y = [0]
+       for x in range(max(n,0)):
+          print(trow)
+          trow=[l+r for l,r in zip(trow+y, y+trow)]
+       return n>=1
+    pascal_triangle(6) 
 
 119. Pascal's Triangle 2
 -------------------------------
