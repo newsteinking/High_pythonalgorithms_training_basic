@@ -452,26 +452,32 @@ Return [1,3,3,1].
 121. Best Time to Buy and Sell Stock
 --------------------------------------------
 
+하루에 한 Transaction이 이루어져야 한다.
+[7, 1, 5, 3, 6, 4]
+day 1 (price 7) day 2 (price 1) day 3 (price 5)
+여기서 buy 가격(낮은 가격이 ) 먼저 나온후 selling 가격이 나와야 한다.
+
+
+
+Say you have an array for which the ith element is the price of a given stock on day i.
+
+If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock),
+design an algorithm to find the maximum profit.
+
+Example 1:
+Input: [7, 1, 5, 3, 6, 4]
+Output: 5
+
+max. difference = 6-1 = 5 (not 7-1 = 6, as selling price needs to be larger than buying price)
+Example 2:
+Input: [7, 6, 4, 3, 1]
+Output: 0
+
+In this case, no transaction is done, i.e. max profit = 0.
+
 .. code-block:: python
 
-    """
 
-    Say you have an array for which the ith element is the price of a given stock on day i.
-
-    If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), design an algorithm to find the maximum profit.
-
-    Example 1:
-    Input: [7, 1, 5, 3, 6, 4]
-    Output: 5
-
-    max. difference = 6-1 = 5 (not 7-1 = 6, as selling price needs to be larger than buying price)
-    Example 2:
-    Input: [7, 6, 4, 3, 1]
-    Output: 0
-
-    In this case, no transaction is done, i.e. max profit = 0.
-
-    """
 
     class Solution(object):
         def maxProfit(self, prices):
@@ -485,18 +491,39 @@ Return [1,3,3,1].
                 maxSum = max(curSum,maxSum)
             return maxSum
 
+    ======================================================
+    class Solution:
+        # @param prices, a list of integer
+        # @return an integer
+        def maxProfit(self, prices):
+            minValue = float("inf")
+            maxBenefit = 0
+            for price  in prices:
+                if minValue > price:
+                    minValue = price
+                if maxBenefit < price - minValue:
+                    maxBenefit = price - minValue
+            return maxBenefit
+
+
 122. Best Time to Buy and Sell Stock 2
 -----------------------------------------
 
+여러번의 Transaction이 가능한 경우이다.
+
+
+Say you have an array for which the ith element is the price of a given stock on day i.
+
+Design an algorithm to find the maximum profit. You may complete as many transactions
+as you like (ie, buy one and sell one share of the stock multiple times). However,
+you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).
+
+
+
+
 .. code-block:: python
 
-    """
 
-    Say you have an array for which the ith element is the price of a given stock on day i.
-
-    Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times). However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).
-
-    """
 
     class Solution(object):
         def maxProfit(self, prices):
@@ -510,20 +537,25 @@ Return [1,3,3,1].
 167. Two Sum 2
 -------------------------------
 
+이미 오름차순으로 정렬 된 정수 배열을 감안할 때 두 개의 숫자가 특정 대상 번호와 더해진다.
+
+함수 twoSum은 두 숫자의 인덱스를 반환하여 대상에 추가합니다. 여기서 index1은 index2보다 작아야합니다. 반환 된 답변 (index1과 index2 모두)은 0부터 시작하지 않습니다.
+
+각 입력에는 정확히 하나의 솔루션이 있다고 가정 할 수 있으며 동일한 요소를 두 번 사용할 수 없습니다.
+
+
+Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
+
+The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.
+
+You may assume that each input would have exactly one solution and you may not use the same element twice.
+
+Input: numbers={2, 7, 11, 15}, target=9
+Output: index1=1, index2=2
+
 .. code-block:: python
 
-    """
 
-    Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
-
-    The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.
-
-    You may assume that each input would have exactly one solution and you may not use the same element twice.
-
-    Input: numbers={2, 7, 11, 15}, target=9
-    Output: index1=1, index2=2
-
-    """
 
     class Solution(object):
         def twoSum(self, numbers, target):
@@ -540,26 +572,40 @@ Return [1,3,3,1].
                 else:
                     res[numbers[i]] = i
             return []
-
+    ==================================================
+        def twoSum2(self,nums, target):
+            lookup = dict((v, i) for i, v in enumerate(nums)) # N
+            for i, v in enumerate(nums):  # N
+                if target - v in lookup and i != lookup[target - v]: # average constant
+                    return [lookup[target - v], i]  # constant
 
 169. Majority Element
 -------------------------------
 
+주어진 크기의 배열 n, 다수 요소를 찾으십시오. 대부분의 요소는 n / 2 번 이상 나타나는 요소입니다.
+
+배열이 비어 있지 않고 배열에 주 요소가 항상 있다고 가정 할 수 있습니다.
+
+핵심)리스트에서 리스트 갯수의 (n/2) 보다 많이 나타나는 숫자 구하기
+
+Input : 3 3 4 2 4 4 2 4 4
+Output : 4
+
+Input : 3 3 4 2 4 4 2 4
+Output : NONE
+
+Given an array of size n, find the majority element. The majority element is the element that appears more than  n/2  times.
+
+You may assume that the array is non-empty and the majority element always exist in the array.
+
+Credits:
+Special thanks to @ts for adding this problem and creating all test cases.
+
+
+
+
 .. code-block:: python
 
-
-    """
-
-    Given an array of size n, find the majority element. The majority element is the element that appears more than �뙄 n/2 �뙅 times.
-
-    You may assume that the array is non-empty and the majority element always exist in the array.
-
-    Credits:
-    Special thanks to @ts for adding this problem and creating all test cases.
-
-    Subscribe to see which companies asked this question.
-
-    """
 
     class Solution(object):
         def majorityElement(self, nums):
@@ -579,14 +625,33 @@ Return [1,3,3,1].
                         count = count - 1
             return cand
 
-    class Solution(object):
+    class Solution2(object):
         def majorityElement(self, nums):
             """
             :type nums: List[int]
             :rtype: int
             """
             return sorted(nums)[len(nums)/2]
+    =============================================
+    from collections import Counter
 
+    def majority(arr):
+
+        # convert array into dictionary
+        freqDict = Counter(arr)
+
+        # traverse dictionary and check majority element
+        size = len(arr)
+        for (key,val) in freqDict.items():
+             if (val > (size/2)):
+                 print(key)
+                 return
+        print('None')
+
+    # Driver program
+    if __name__ == "__main__":
+        arr = [3,3,4,2,4,4,2,4,4]
+        majority(arr)
 
 189. Rotate Array
 -------------------------------
