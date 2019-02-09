@@ -110,8 +110,16 @@ Bucket
 Source: `Wikipedia <https://en.wikipedia.org/wiki/Bucket_sort>`_
 ####################################################################
 
-Cocktail shaker
-^^^^^^^^^^^^^^^
+
+.. code-block:: python
+
+
+
+
+
+
+Cocktail shaker sort
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 .. image:: https://upload.wikimedia.org/wikipedia/commons/e/ef/Sorting_shaker_sort_anim.gif
@@ -179,8 +187,8 @@ Source: `Wikipedia <https://en.wikipedia.org/wiki/Merge_sort>`_
 View the algorithm in `action <https://www.toptal.com/developers/sorting-algorithms/merge-sort>`_
 #####################################################################################################
 
-Quick
-^^^^^
+Quick Sort
+^^^^^^^^^^^^^^^
 
 
 .. image:: https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif
@@ -203,8 +211,8 @@ Source: `Wikipedia <https://en.wikipedia.org/wiki/Quickselect>`_
 View the algorithm in `action <https://www.toptal.com/developers/sorting-algorithms/quick-sort>`_
 #####################################################################################################
 
-Heap
-^^^^
+Heap Sort
+^^^^^^^^^^^^^^
 
 **Heapsort** is a *comparison-based* sorting algorithm. It can be thought of as an improved selection sort. It divides its input into a sorted and an unsorted region, and it iteratively shrinks the unsorted region by extracting the largest element and moving that to the sorted region.
 
@@ -221,8 +229,8 @@ Source: `Wikipedia <https://en.wikipedia.org/wiki/Heapsort>`_
 View the algorithm in `action <https://www.toptal.com/developers/sorting-algorithms/heap-sort>`_
 ####################################################################################################
 
-Radix
-^^^^^
+Radix Sort
+^^^^^^^^^^^^^^^
 
 From `Wikipedia <https://en.wikipedia.org/wiki/Radix_sort>`_\ : Radix sort is a non-comparative integer sorting algorithm that sorts data with integer keys by grouping keys by the individual digits which share the same significant position and value.
 
@@ -236,8 +244,8 @@ From `Wikipedia <https://en.wikipedia.org/wiki/Radix_sort>`_\ : Radix sort is a 
 Source: `Wikipedia <https://en.wikipedia.org/wiki/Radix_sort>`_
 ###################################################################
 
-Selection
-^^^^^^^^^
+Selection Sort
+^^^^^^^^^^^^^^^^^^^
 
 
 .. image:: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Selection_sort_animation.gif/250px-Selection_sort_animation.gif
@@ -260,8 +268,8 @@ Source: `Wikipedia <https://en.wikipedia.org/wiki/Selection_sort>`_
 View the algorithm in `action <https://www.toptal.com/developers/sorting-algorithms/selection-sort>`_
 #########################################################################################################
 
-Shell
-^^^^^
+Shell Sort
+^^^^^^^^^^^^^^^
 
 
 .. image:: https://upload.wikimedia.org/wikipedia/commons/d/d8/Sorting_shellsort_anim.gif
@@ -284,13 +292,13 @@ Source: `Wikipedia <https://en.wikipedia.org/wiki/Shellsort>`_
 View the algorithm in `action <https://www.toptal.com/developers/sorting-algorithms/shell-sort>`_
 #####################################################################################################
 
-Topological
-^^^^^^^^^^^
+Topological Sort
+^^^^^^^^^^^^^^^^^^^^^
 
 From `Wikipedia <https://en.wikipedia.org/wiki/Topological_sorting>`_\ : **Topological sort**\ , or *topological ordering of a directed graph* is a linear ordering of its vertices such that for every directed edge *uv* from vertex *u* to vertex *v*\ , *u* comes before *v* in the ordering. For instance, the vertices of the graph may represent tasks to be performed, and the edges may represent constraints that one task must be performed before another; in this application, a topological ordering is just a valid sequence for the tasks. A topological ordering is possible if and only if the graph has no directed cycles, that is, if it is a *directed acyclic graph* (DAG). Any DAG has at least one topological ordering, and algorithms are known for constructing a topological ordering of any DAG in linear time.
 
 Time-Complexity Graphs
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Comparing the complexity of sorting algorithms (\ *Bubble Sort*\ , *Insertion Sort*\ , *Selection Sort*\ )
 
@@ -310,7 +318,7 @@ Search Algorithms
 -----------------
 
 Linear
-^^^^^^
+^^^^^^^^^^^^^^^^
 
 
 .. image:: http://www.tutorialspoint.com/data_structures_algorithms/images/linear_search.gif
@@ -332,7 +340,7 @@ Source: `Wikipedia <https://en.wikipedia.org/wiki/Linear_search>`_
 ######################################################################
 
 Binary
-^^^^^^
+^^^^^^^^^^^^^^^^
 
 
 .. image:: https://upload.wikimedia.org/wikipedia/commons/f/f7/Binary_search_into_array.png
@@ -354,7 +362,7 @@ Source: `Wikipedia <https://en.wikipedia.org/wiki/Binary_search_algorithm>`_
 ################################################################################
 
 Interpolation
--------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Interpolation search** is an algorithm for searching for a key in an array that has been ordered by numerical values assigned to the keys (key values). It was first described by W. W. Peterson in 1957.[1] Interpolation search resembles the method by which people search a telephone directory for a name (the key value by which the book's entries are ordered): in each step the algorithm calculates where in the remaining search space the sought item might be, based on the key values at the bounds of the search space and the value of the sought key, usually via a linear interpolation. The key value actually found at this estimated position is then compared to the key value being sought. If it is not equal, then depending on the comparison, the remaining search space is reduced to the part before or after the estimated position. This method will only work if calculations on the size of differences between key values are sensible.
 
@@ -368,7 +376,7 @@ Source: `Wikipedia <https://en.wikipedia.org/wiki/Interpolation_search>`_
 #############################################################################
 
 Jump Search
------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Jump search** or *block search* refers to a search algorithm for ordered lists. It works by first checking all items Lkm, where {\displaystyle k\in \mathbb {N} } k\in \mathbb {N}  and m is the block size, until an item is found that is larger than the search key. To find the exact position of the search key in the list a linear search is performed on the sublist L[(k-1)m, km].
 
@@ -380,7 +388,7 @@ Source: `Wikipedia <https://en.wikipedia.org/wiki/Jump_search>`_
 ####################################################################
 
 Quick Select
-------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 .. image:: https://upload.wikimedia.org/wikipedia/commons/0/04/Selecting_quickselect_frames.gif
@@ -398,7 +406,7 @@ Source: `Wikipedia <https://en.wikipedia.org/wiki/Quickselect>`_
 ####################################################################
 
 Tabu
-----
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Tabu search** uses a local or neighborhood search procedure to iteratively move from one potential solution {\displaystyle x} x to an improved solution {\displaystyle x'} x' in the neighborhood of {\displaystyle x} x, until some stopping criterion has been satisfied (generally, an attempt limit or a score threshold). Local search procedures often become stuck in poor-scoring areas or areas where scores plateau. In order to avoid these pitfalls and explore regions of the search space that would be left unexplored by other local search procedures, tabu search carefully explores the neighborhood of each solution as the search progresses. The solutions admitted to the new neighborhood, {\displaystyle N^{\ *}(x)} N^*\ (x), are determined through the use of memory structures. Using these memory structures, the search progresses by iteratively moving from the current solution {\displaystyle x} x to an improved solution {\displaystyle x'} x' in {\displaystyle N^{\ *}(x)} N^*\ (x).
 
@@ -413,7 +421,7 @@ Ciphers
 -------
 
 Caesar
-^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 ![alt text][caesar]
 
@@ -426,7 +434,7 @@ Source: `Wikipedia <https://en.wikipedia.org/wiki/Caesar_cipher>`_
 ######################################################################
 
 Vigenère
-^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Vigenère cipher** is a method of encrypting alphabetic text by using a series of **interwoven Caesar ciphers** based on the letters of a keyword. It is **a form of polyalphabetic substitution**.\ :raw-html-m2r:`<br>`
 The Vigenère cipher has been reinvented many times. The method was originally described by Giovan Battista Bellaso in his 1553 book La cifra del. Sig. Giovan Battista Bellaso; however, the scheme was later misattributed to Blaise de Vigenère in the 19th century, and is now widely known as the "Vigenère cipher".\ :raw-html-m2r:`<br>`
@@ -437,7 +445,7 @@ Source: `Wikipedia <https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher>`_
 #############################################################################
 
 Transposition
-^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Transposition cipher** is a method of encryption by which the positions held by units of *plaintext* (which are commonly characters or groups of characters) are shifted according to a regular system, so that the *ciphertext* constitutes a permutation of the plaintext. That is, the order of the units is changed (the plaintext is reordered).\ :raw-html-m2r:`<br>` 
 
@@ -447,7 +455,7 @@ Source: `Wikipedia <https://en.wikipedia.org/wiki/Transposition_cipher>`_
 #############################################################################
 
 RSA (Rivest–Shamir–Adleman)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **RSA** *(Rivest–Shamir–Adleman)* is one of the first public-key cryptosystems and is widely used for secure data transmission. In such a cryptosystem, the encryption key is public and it is different from the decryption key which is kept secret (private). In RSA, this asymmetry is based on the practical difficulty of the factorization of the product of two large prime numbers, the "factoring problem". The acronym RSA is made of the initial letters of the surnames of Ron Rivest, Adi Shamir, and Leonard Adleman, who first publicly described the algorithm in 1978. Clifford Cocks, an English mathematician working for the British intelligence agency Government Communications Headquarters (GCHQ), had developed an equivalent system in 1973, but this was not declassified until 1997.[1]
 
@@ -457,7 +465,7 @@ Source: `Wikipedia <https://en.wikipedia.org/wiki/RSA_(cryptosystem>`_\ )
 ###########################################################################
 
 ROT13
------
+^^^^^^^^^^^^^^^^
 
 
 .. image:: https://upload.wikimedia.org/wikipedia/commons/3/33/ROT13_table_with_example.svg
@@ -473,7 +481,7 @@ Source: `Wikipedia <https://en.wikipedia.org/wiki/ROT13>`_
 ##############################################################
 
 XOR
----
+^^^^^^^^^^^^^^^^
 
 **XOR cipher** is a simple type of additive cipher,[1] an encryption algorithm that operates according to the principles:
 
