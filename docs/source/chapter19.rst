@@ -1,4 +1,4 @@
-chapter 19: Recursion
+chapter 19: Stack
 =======================================
 .. toctree::
    :maxdepth: 4

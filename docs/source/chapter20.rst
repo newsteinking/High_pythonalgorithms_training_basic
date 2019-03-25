@@ -1,4 +1,4 @@
-chapter 20: Stack
+chapter 20: String
 =======================================
 .. toctree::
    :maxdepth: 4

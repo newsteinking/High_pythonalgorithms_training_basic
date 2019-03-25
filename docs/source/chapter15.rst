@@ -1,4 +1,4 @@
-chapter 15: Images
+chapter 15: Linked List
 =======================================
 .. toctree::
    :maxdepth: 4

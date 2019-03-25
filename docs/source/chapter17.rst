@@ -1,4 +1,4 @@
-chapter 17: Math
+chapter 17: Others
 ==========================================
 
 .. toctree::

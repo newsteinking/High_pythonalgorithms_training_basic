@@ -1,4 +1,4 @@
-chapter 23: Tree
+chapter 23: Two Pointers
 =======================================
 .. toctree::
    :maxdepth: 4

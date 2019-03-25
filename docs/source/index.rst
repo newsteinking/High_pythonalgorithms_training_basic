@@ -41,8 +41,7 @@ Python Algorithms Training Basic
    chapter21
    chapter22
    chapter23
-   chapter24
-   chapter25
+
 
 
 

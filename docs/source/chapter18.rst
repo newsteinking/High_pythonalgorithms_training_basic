@@ -1,4 +1,4 @@
-chapter 18: Others
+chapter 18: Recursion
 =======================================
 .. toctree::
    :maxdepth: 4

@@ -1,4 +1,4 @@
-chapter 22: ToBeOptimized
+chapter 22: Tree
 =======================================
 .. toctree::
    :maxdepth: 4
